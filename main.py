@@ -3,11 +3,11 @@ from pyTONPublicAPI import pyTONPublicAPI
 from telebot.apihelper import approve_chat_join_request
 
 BOT_TOKEN = 'YourBotToken'
-chat_id = 00000000000
 bot = telebot.TeleBot(BOT_TOKEN)
 
 
-def test(message):
+def approve(message):
+    global chat_id
     user_id = message.from_user.id
     address = message.text
     client = pyTONPublicAPI()
@@ -29,7 +29,9 @@ def test(message):
 
 
 @bot.chat_join_request_handler()
-def lalala(message: telebot.types.ChatJoinRequest):
+def main(message: telebot.types.ChatJoinRequest):
+    global chat_id
+    chat_id = message.chat.id
     msg = bot.send_message(message.user_chat_id,
                            'Привет, ты подал заявку на закрытый чат. Чтобы тебя принять, '
                            'привяжи свой TON кошелек к боту. '

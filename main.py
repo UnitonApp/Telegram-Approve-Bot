@@ -6,6 +6,10 @@ BOT_TOKEN = 'YourBotToken'
 bot = telebot.TeleBot(BOT_TOKEN)
 
 
+@bot.message_handler(content_types=util.content_type_service)
+def dell_new_member(message: types.Message):
+    bot.delete_message(message.chat.id,message.message_id)
+
 def approve(message):
     global chat_id
     user_id = message.from_user.id

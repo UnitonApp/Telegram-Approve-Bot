@@ -34,13 +34,13 @@ Premium или 1 NFT, бот принимает заявку в канал/ча�
 ## Установка
 
 1. Получите у [BotFather](https://t.me/BotFather) Токен бота и вставьте его в переменную BOT_TOKEN.
-2. Создание виртуального окружения
+2. 
+3. Создание виртуального окружения
+  <br>`python -m venv venv`</br>
+  <br>`python venv\Scripts\activate.bat` - для Windows;</br>
+  <br>`python source venv/bin/activate` - для Linux и MacOS.</br>
 
-<br>`python -m venv venv`</br>
-<br>`python venv\Scripts\activate.bat` - для Windows;</br>
-<br>`python source venv/bin/activate` - для Linux и MacOS.</br>
-
-3. Установите все зависимости, используя команду `pip install -r requirements.txt`
+4. Установите все зависимости, используя команду `pip install -r requirements.txt`
 
 
 ## Использование
